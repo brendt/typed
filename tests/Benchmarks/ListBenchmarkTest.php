@@ -2,8 +2,8 @@
 
 namespace Spatie\Typed\Tests\Benchmarks;
 
-use Spatie\Typed\T;
 use Spatie\Typed\Collection;
+use Spatie\Typed\T;
 
 class ListBenchmarkTest extends BenchmarkTest
 {
