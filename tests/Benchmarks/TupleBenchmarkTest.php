@@ -10,20 +10,39 @@ class TupleBenchmarkTest extends BenchmarkTest
     /** @test */
     public function array_write()
     {
-        $this->start();
+        $this->startTimer();
 
-        $tuple = [1, 'a'];
+        foreach ($this->range() as $item) {
+            $tuple = [1, 'a'];
+        }
 
-        $this->stop();
+        $this->output('array write', $this->stopTimer());
     }
 
     /** @test */
     public function tuple_write()
     {
-        $this->start();
+        $this->startTimer();
 
-        $tuple = (new Tuple(T::int(), T::string()))->set([1, 'a']);
+        $tuple = new Tuple(T::int(), T::string());
+        foreach ($this->range() as $item) {
+            $tuple[0] = 1;
+            $tuple[1] = 'a';
+        }
 
-        $this->stop();
+        $this->output('tuple write', $this->stopTimer());
+    }
+
+    /** @test */
+    public function tuple_write_set()
+    {
+        $this->startTimer();
+
+        $tuple = new Tuple(T::int(), T::string());
+        foreach ($this->range() as $item) {
+            $tuple->set(1, 'a');
+        }
+
+        $this->output('tuple write via set method', $this->stopTimer());
     }
 }

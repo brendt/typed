@@ -36,7 +36,7 @@ class Collection implements ArrayAccess, Iterator, Countable
         $this->set($type);
     }
 
-    public function set(array $data): self
+    public function set(iterable $data): self
     {
         foreach ($data as $item) {
             $this[] = $item;

@@ -59,4 +59,11 @@ EOL;
     {
         return round($bytes / 1000000, 3).' MB';
     }
+
+    protected function range()
+    {
+        foreach (range(1, 1000000) as $i) {
+            yield $i;
+        }
+    }
 }

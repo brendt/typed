@@ -14,7 +14,7 @@ class ListBenchmarkTest extends BenchmarkTest
 
         $this->startTimer();
 
-        foreach (range(1, 1000000) as $i) {
+        foreach ($this->range() as $i) {
             $array[] = $i;
         }
 
@@ -30,7 +30,7 @@ class ListBenchmarkTest extends BenchmarkTest
 
         $this->startTimer();
 
-        foreach (range(1, 1000000) as $i) {
+        foreach ($this->range() as $i) {
             $list[] = $i;
         }
 
@@ -42,7 +42,7 @@ class ListBenchmarkTest extends BenchmarkTest
     {
         $array = [];
 
-        foreach (range(1, 1000000) as $i) {
+        foreach ($this->range() as $i) {
             $array[] = $i;
         }
 
@@ -62,7 +62,7 @@ class ListBenchmarkTest extends BenchmarkTest
     {
         $list = new Collection(T::int());
 
-        foreach (range(1, 1000000) as $i) {
+        foreach ($this->range() as $i) {
             $list[] = $i;
         }
 

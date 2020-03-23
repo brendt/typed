@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Spatie\Typed\Tests;
 
+use ArrayIterator;
 use TypeError;
 use Spatie\Typed\T;
 use Spatie\Typed\Collection;
@@ -49,6 +50,48 @@ class CollectionTest extends TestCase
         $this->expectException(TypeError::class);
 
         $list[] = new Wrong();
+    }
+
+    /** @test */
+    public function a_collection_set_method_can_accept_array()
+    {
+        $list = new IntegerList();
+        $list->set([1]);
+        foreach ($list as $i) {
+            $this->assertEquals(1, $i);
+        }
+
+        $this->assertEquals(1, $list[0]);
+    }
+
+    /** @test */
+    public function a_collection_set_method_can_accept_generator()
+    {
+        $generator = function () {
+            yield 1;
+        };
+
+        $list = new IntegerList();
+        $list->set($generator());
+        foreach ($list as $i) {
+            $this->assertEquals(1, $i);
+        }
+
+        $this->assertEquals(1, $list[0]);
+    }
+
+    /** @test */
+    public function a_collection_set_method_can_accept_iterator()
+    {
+        $iterator = new ArrayIterator([1]);
+
+        $list = new IntegerList();
+        $list->set($iterator);
+        foreach ($list as $i) {
+            $this->assertEquals(1, $i);
+        }
+
+        $this->assertEquals(1, $list[0]);
     }
 
     /** @test */
