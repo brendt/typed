@@ -11,6 +11,7 @@ use Spatie\Typed\Tests\Extra\Post;
 use Spatie\Typed\Tests\Extra\Wrong;
 use Spatie\Typed\Exceptions\WrongType;
 use Spatie\Typed\Exceptions\UninitialisedError;
+use PHPUnit\Framework\TestCase;
 
 class StructTest extends TestCase
 {

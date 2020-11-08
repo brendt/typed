@@ -14,6 +14,7 @@ use Spatie\Typed\Lists\GenericList;
 use Spatie\Typed\Tests\Extra\Wrong;
 use Spatie\Typed\Types\GenericType;
 use Spatie\Typed\Tests\Extra\HelperClass;
+use PHPUnit\Framework\TestCase;
 
 class ErrorTest extends TestCase
 {

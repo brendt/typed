@@ -19,6 +19,7 @@ use Spatie\Typed\Types\IntegerType;
 use Spatie\Typed\Types\CallableType;
 use Spatie\Typed\Types\CollectionType;
 use Spatie\Typed\Exceptions\InferredTypeError;
+use PHPUnit\Framework\TestCase;
 
 class TypeTest extends TestCase
 {

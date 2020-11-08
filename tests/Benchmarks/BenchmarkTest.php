@@ -2,7 +2,7 @@
 
 namespace Spatie\Typed\Tests\Benchmarks;
 
-use Spatie\Typed\Tests\TestCase;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Stopwatch\Stopwatch;
 use Symfony\Component\Stopwatch\StopwatchEvent;
 

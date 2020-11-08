@@ -10,6 +10,7 @@ use Spatie\Typed\Collection;
 use Spatie\Typed\Tests\Extra\Post;
 use Spatie\Typed\Lists\IntegerList;
 use Spatie\Typed\Tests\Extra\Wrong;
+use PHPUnit\Framework\TestCase;
 
 class CollectionTest extends TestCase
 {

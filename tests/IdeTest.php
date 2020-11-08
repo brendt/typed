@@ -9,6 +9,7 @@ use Spatie\Typed\Tests\Extra\Foo;
 use Spatie\Typed\Tests\Extra\Line;
 use Spatie\Typed\Tests\Extra\FooBar;
 use Spatie\Typed\Tests\Extra\LineCollection;
+use PHPUnit\Framework\TestCase;
 
 /**
  * This test case is used to test IDE auto completion, it doesn't actually assert anything useful.

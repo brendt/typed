@@ -9,6 +9,7 @@ use Spatie\Typed\T;
 use Spatie\Typed\Collection;
 use Spatie\Typed\Tests\Extra\Post;
 use Spatie\Typed\Tests\Extra\Wrong;
+use PHPUnit\Framework\TestCase;
 
 class UnionTypeTest extends TestCase
 {

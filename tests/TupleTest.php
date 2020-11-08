@@ -13,6 +13,7 @@ use Spatie\Typed\Types\BooleanType;
 use Spatie\Typed\Types\IntegerType;
 use Spatie\Typed\Exceptions\WrongType;
 use Spatie\Typed\Exceptions\UninitialisedError;
+use PHPUnit\Framework\TestCase;
 
 class TupleTest extends TestCase
 {
