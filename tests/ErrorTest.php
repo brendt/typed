@@ -29,7 +29,7 @@ class ErrorTest extends TestCase
 
             $fileName = __FILE__;
 
-            $this->assertContains("{$fileName}:{$line}", $e->getMessage());
+            $this->assertStringContainsString("{$fileName}:{$line}", $e->getMessage());
         }
     }
 
@@ -45,7 +45,7 @@ class ErrorTest extends TestCase
 
             $fileName = __FILE__;
 
-            $this->assertContains("{$fileName}:{$line}", $e->getMessage());
+            $this->assertStringContainsString("{$fileName}:{$line}", $e->getMessage());
         }
     }
 
@@ -55,7 +55,7 @@ class ErrorTest extends TestCase
         try {
             new HelperClass();
         } catch (TypeError $e) {
-            $this->assertContains('HelperClass.php:15', $e->getMessage());
+            $this->assertStringContainsString('HelperClass.php:15', $e->getMessage());
         }
     }
 
@@ -71,7 +71,7 @@ class ErrorTest extends TestCase
 
             $fileName = __FILE__;
 
-            $this->assertContains("$fileName:{$line}", $e->getMessage());
+            $this->assertStringContainsString("$fileName:{$line}", $e->getMessage());
         }
     }
 
@@ -89,7 +89,7 @@ class ErrorTest extends TestCase
 
             $fileName = __FILE__;
 
-            $this->assertContains("$fileName:{$line}", $e->getMessage());
+            $this->assertStringContainsString("$fileName:{$line}", $e->getMessage());
         }
     }
 }

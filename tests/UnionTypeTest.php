@@ -78,9 +78,9 @@ class UnionTypeTest extends TestCase
         } catch (TypeError $typeError) {
             $message = $typeError->getMessage();
 
-            $this->assertContains('integer', $message);
-            $this->assertContains('float', $message);
-            $this->assertContains('generic<Spatie\Typed\Tests\Extra\Post>', $message);
+            $this->assertStringContainsString('integer', $message);
+            $this->assertStringContainsString('float', $message);
+            $this->assertStringContainsString('generic<Spatie\Typed\Tests\Extra\Post>', $message);
         }
     }
 }

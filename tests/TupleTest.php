@@ -25,7 +25,7 @@ class TupleTest extends TestCase
             new BooleanType())
         )->set(1, 'a', true);
 
-        $this->assertInternalType('array', $data->toArray());
+        $this->assertTrue(is_array($data->toArray()));
     }
 
     /** @test */
