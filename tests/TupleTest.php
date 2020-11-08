@@ -23,7 +23,8 @@ class TupleTest extends TestCase
         $data = (new Tuple(
             new IntegerType(),
             new StringType(),
-            new BooleanType())
+            new BooleanType()
+        )
         )->set(1, 'a', true);
 
         $this->assertTrue(is_array($data->toArray()));
