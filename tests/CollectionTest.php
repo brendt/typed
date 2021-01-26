@@ -158,4 +158,18 @@ class CollectionTest extends TestCase
 
         $this->assertSame([1, 2, 3], $list->toArray());
     }
+
+    /** @test */
+    public function it_removes_all_elements_in_the_collection()
+    {
+        $list = new Collection(T::int());
+
+        $list[] = 1;
+        $list[] = 2;
+        $list[] = 3;
+
+        $list->clear();
+
+        $this->assertCount(0, $list);
+    }
 }

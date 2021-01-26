@@ -105,4 +105,9 @@ class Collection implements ArrayAccess, Iterator, Countable
     {
         return count($this->data);
     }
+
+    public function clear(): void
+    {
+        $this->data = [];
+    }
 }
